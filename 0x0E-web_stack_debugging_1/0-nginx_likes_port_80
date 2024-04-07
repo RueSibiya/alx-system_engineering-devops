@@ -4,9 +4,9 @@
 # remove the default nginx configuration file
 rm /etc/nginx/sites-enabled/default
 # Fix nginx to listen to port 80 for all active IPv4 IPs
-ln -s /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
+sudo ln -sf /etc/nginx/sites-available/default etc/nginx/sites-enabled/default
 # restart nginx server
-service nginx restart
+sudo service nginx restart
 
 # Check if the "listen 80 default_server;" line is present and correctly configured in the default site configuration file
 if ! grep -q "listen 80 default_server;" /etc/nginx/sites-enabled/default; then
