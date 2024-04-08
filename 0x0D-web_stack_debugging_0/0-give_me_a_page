@@ -1,3 +1,4 @@
 #!usr/bin/env/ bash
-#launch apache2 inside docker
+#launch apache2 to return
+# a page containg Hello Holberton
 service apache2 start
